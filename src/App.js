@@ -4,24 +4,25 @@ import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment } from './redux/slice/slice'
 
 function Counter() {
-  const count = useSelector((state) => state.counter.value)
+  const count = useSelector((state) => state.cou.nacht)
   const dispatch = useDispatch()
 
   return (
     <div>
+      <h1>gece modu {count ? 'kapali ':'acik'}</h1>
       <div>
         <button
-          aria-label="Increment value"
+          aria-label="gece modu"
           onClick={() => dispatch(increment())}
         >
-          Increment
+        gece modu
         </button>
         <span>{count}</span>
         <button
-          aria-label="Decrement value"
+          aria-label="gunduz modu"
           onClick={() => dispatch(decrement())}
         >
-          Decrement
+         gunduz modu
         </button>
       </div>
     </div>
